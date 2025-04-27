@@ -19,8 +19,8 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-# Configure CORS to allow requests from the React frontend
-CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000"]}})
+# Configure CORS to allow requests from all origins for API routes
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 def calculate_predicted_price(issue_price, gmp, market_cap, roce, roe, industry_growth):
     """
