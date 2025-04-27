@@ -274,5 +274,6 @@ def get_history():
         logger.error(f"Error fetching prediction history: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True) 
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # 10000 is Render's default
+    app.run(host="0.0.0.0", port=port) 
