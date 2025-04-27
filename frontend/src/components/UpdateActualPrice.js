@@ -38,7 +38,7 @@ const UpdateActualPrice = () => {
     setSuccess(false);
 
     try {
-      const response = await fetch('http://localhost:5000/api/update-price', {
+      const response = await fetch('https://ipo-listing-predictor.onrender.com/api/update-price', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

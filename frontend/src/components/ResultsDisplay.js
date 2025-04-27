@@ -22,7 +22,7 @@ const ResultsDisplay = ({ prediction }) => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/prediction-history');
+        const response = await fetch('https://ipo-listing-predictor.onrender.com/api/prediction-history');
         const data = await response.json();
         
         if (!response.ok) {
